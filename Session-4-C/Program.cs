@@ -54,8 +54,29 @@
             */
 
             #endregion
-       
-        
+
+            #region question4
+            //Write a program that takes two integers then prints the power.
+            /*
+            Console.Write("please enter first integer ");
+            bool isValidInput1 = int.TryParse(Console.ReadLine(), out int number1);
+            Console.Write("please enter second integer ");
+            bool isValidInput2 = int.TryParse(Console.ReadLine(), out int number2);
+
+            if (isValidInput1 && isValidInput2)
+            {
+                int result = 1;
+                for (int i = 1; i <= number2; i++)
+                {
+                   result *= number1;
+
+                }
+                Console.WriteLine($"output {result}");
+            }
+            */
+            #endregion
+
+
         }
     }
 }
