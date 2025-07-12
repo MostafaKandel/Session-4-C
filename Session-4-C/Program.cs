@@ -6,16 +6,16 @@
         {
             #region question1
             // Write a program that allows the user to insert an integer then print all numbers between 1 to that number
-           /*
-            Console.WriteLine("Enter an integer:");
-           bool isValidInput = int.TryParse(Console.ReadLine(), out int number);
-         if (isValidInput && number > 0) { 
-               for (int i = 1; i <= number; i++)
-               {
-                   Console.Write($"{i},");
-               }
-            }
-           */
+            /*
+             Console.WriteLine("Enter an integer:");
+            bool isValidInput = int.TryParse(Console.ReadLine(), out int number);
+          if (isValidInput && number > 0) { 
+                for (int i = 1; i <= number; i++)
+                {
+                    Console.Write($"{i},");
+                }
+             }
+            */
             #endregion
 
             #region question2
@@ -35,6 +35,27 @@
             */
             #endregion
 
+            #region question3
+            // Write a program that allows to user to insert number then print all even numbers between 1 to this number
+            /*
+            Console.Write("please enter an integer ");
+            bool isValidInput = int.TryParse(Console.ReadLine(), out int number);
+            if (isValidInput)
+            {
+                for (int i = 1; i <= number; i++)
+                {
+                    if (i % 2 == 0)
+                    {
+                        Console.Write($"{i} ");
+                    }
+                    
+                }
+            }
+            */
+
+            #endregion
+       
+        
         }
     }
 }
