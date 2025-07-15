@@ -81,7 +81,7 @@ namespace Session_4_C
 
             #region question5
             //Write a program to enter marks of five subjects and calculate total, average and percentage.
-
+            /*
             Console.WriteLine("please enter the grades of five subjects");
             int total = 0;
             for (int i = 1; i < 6; i++) {
@@ -94,8 +94,21 @@ namespace Session_4_C
             Console.WriteLine("Total Marks = " + total);
             Console.WriteLine("Average Marks = " + average);
             Console.WriteLine($"precentage= {percentage}%");
+            */
             #endregion
 
+
+            #region question6
+            //Write a program to allow the user to enter a string and print the REVERSE of it.
+            
+            Console.WriteLine("please enter the string");
+            string input = Console.ReadLine();
+            string reversedInput = "";
+            for (int i = input.Length - 1; i >= 0; i--) { 
+            reversedInput += input[i];
+            }
+            Console.WriteLine($"reversed String: {reversedInput}");
+            #endregion 
 
             #region question8
             //Write a program in C# Sharp to find prime numbers within a range of numbers.
