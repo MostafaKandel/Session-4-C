@@ -100,7 +100,7 @@ namespace Session_4_C
 
             #region question6
             //Write a program to allow the user to enter a string and print the REVERSE of it.
-            
+            /*
             Console.WriteLine("please enter the string");
             string input = Console.ReadLine();
             string reversedInput = "";
@@ -108,7 +108,30 @@ namespace Session_4_C
             reversedInput += input[i];
             }
             Console.WriteLine($"reversed String: {reversedInput}");
-            #endregion 
+            */
+            #endregion
+
+            #region question7
+            //Write a program to allow the user to enter int and print the REVERSED of it.
+            Console.WriteLine("please enter the int");
+            bool validInput = int.TryParse(Console.ReadLine(), out int number);
+           if (validInput)
+            {
+                string input = number.ToString();
+                string reversedInput = "";
+                for (int i = input.Length - 1; i >= 0; i--)
+                {
+                    reversedInput += input[i];
+                }
+                Console.WriteLine($"reversed String: {reversedInput}");
+            }
+            else
+            {
+                Console.WriteLine("Invalid input. Please enter a valid integer.");
+            }
+             
+
+            #endregion
 
             #region question8
             //Write a program in C# Sharp to find prime numbers within a range of numbers.
@@ -158,6 +181,10 @@ namespace Session_4_C
 
             #endregion
 
+
+            #region question9
+            // Write a program in C# Sharp to convert a decimal number into binary without using an array.
+            #endregion
 
         }
     }
