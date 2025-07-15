@@ -203,6 +203,7 @@ namespace Session_4_C
             #region question10
             //Create a program that asks the user to input three points (x1, y1), (x2, y2), and (x3, y3),
             //and determines whether these points lie on a single straight line.
+            /*
             Console.WriteLine("please enter x1");
             bool isValidInputX1 = double.TryParse(Console.ReadLine(), out double x1);
             Console.WriteLine("please enter y1");
@@ -231,7 +232,37 @@ namespace Session_4_C
             {
                 Console.WriteLine("Invalid input. Please enter valid numbers.");
             }
+            */
+            #endregion
 
+            #region question11
+            //Write a program that prints an identity matrix using for loop, in other words takes a value n
+            //from the user and shows the identity table of size n * n.
+
+            Console.WriteLine("please enter the number");
+            bool isValidInput = int.TryParse(Console.ReadLine(), out int n);
+            if (isValidInput && n > 0)
+            {
+                for (int i = 0; i < n; i++)
+                {
+                    for (int j = 0; j < n; j++)
+                    {
+                        if (i == j)
+                        {
+                            Console.Write("1 ");
+                        }
+                        else
+                        {
+                            Console.Write("0 ");
+                        }
+                    }
+                    Console.WriteLine();
+                }
+            }
+            else
+            {
+                Console.WriteLine("Invalid input. Please enter a valid positive integer.");
+            }
             #endregion
         }
     }
