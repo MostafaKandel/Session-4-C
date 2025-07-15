@@ -1,4 +1,7 @@
-﻿namespace Session_4_C
+﻿using System.ComponentModel;
+using System.Diagnostics.Metrics;
+
+namespace Session_4_C
 {
     internal class Program
     {
@@ -74,6 +77,72 @@
                 Console.WriteLine($"output {result}");
             }
             */
+            #endregion
+
+            #region question5
+            //Write a program to enter marks of five subjects and calculate total, average and percentage.
+
+            Console.WriteLine("please enter the grades of five subjects");
+            int total = 0;
+            for (int i = 1; i < 6; i++) {
+                Console.Write("Subject " + i + ": ");
+                total += int.Parse(Console.ReadLine());
+            }
+
+            double average = total / 5;
+            double percentage = average;
+            Console.WriteLine("Total Marks = " + total);
+            Console.WriteLine("Average Marks = " + average);
+            Console.WriteLine($"precentage= {percentage}%");
+            #endregion
+
+
+            #region question8
+            //Write a program in C# Sharp to find prime numbers within a range of numbers.
+            /*
+            Console.Write("Enter the starting number of the range: ");
+            bool isValidInputStart = int.TryParse(Console.ReadLine(), out int startNumber);
+            Console.Write("Enter the ending number of the range: ");
+            bool isValidInputEnd = int.TryParse(Console.ReadLine(), out int endNumber);
+            if (isValidInputEnd && isValidInputStart)
+            {
+                for (int number = startNumber; number <= endNumber; number++)
+                {
+                    if (number <= 1)
+                        continue;
+
+                    bool isPrime = true;
+
+                    if (number == 2)
+                    {
+                        Console.WriteLine(number);
+                        continue;
+                    }
+
+                    if (number % 2 == 0)
+                        continue;
+
+                    int boundary = (int)Math.Sqrt(number);
+
+                    for (int i = 3; i <= boundary; i += 2)
+                    {
+                        if (number % i == 0)
+                        {
+                            isPrime = false;
+                            break;
+                        }
+                    }
+
+                    if (isPrime)
+                        Console.WriteLine(number);
+                }
+            }
+            else
+            {
+                               Console.WriteLine("Invalid input. Please enter valid integers.");
+            }
+        */
+
             #endregion
 
 
