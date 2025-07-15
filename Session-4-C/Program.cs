@@ -113,6 +113,7 @@ namespace Session_4_C
 
             #region question7
             //Write a program to allow the user to enter int and print the REVERSED of it.
+            /*
             Console.WriteLine("please enter the int");
             bool validInput = int.TryParse(Console.ReadLine(), out int number);
            if (validInput)
@@ -129,7 +130,7 @@ namespace Session_4_C
             {
                 Console.WriteLine("Invalid input. Please enter a valid integer.");
             }
-             
+             */
 
             #endregion
 
@@ -184,6 +185,17 @@ namespace Session_4_C
 
             #region question9
             // Write a program in C# Sharp to convert a decimal number into binary without using an array.
+            Console.Write("Enter a decimal number: ");
+            int num = int.Parse(Console.ReadLine());
+            string binary = "";
+
+            while (num > 0)
+            {
+                binary = (num % 2) + binary;
+                num /= 2;
+            }
+
+            Console.WriteLine("Binary: " + binary);
             #endregion
 
         }
