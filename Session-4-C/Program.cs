@@ -136,49 +136,64 @@ namespace Session_4_C
 
             #region question8
             //Write a program in C# Sharp to find prime numbers within a range of numbers.
-            /*
+            
             Console.Write("Enter the starting number of the range: ");
             bool isValidInputStart = int.TryParse(Console.ReadLine(), out int startNumber);
             Console.Write("Enter the ending number of the range: ");
             bool isValidInputEnd = int.TryParse(Console.ReadLine(), out int endNumber);
             if (isValidInputEnd && isValidInputStart)
             {
-                for (int number = startNumber; number <= endNumber; number++)
+                if (startNumber < endNumber)
                 {
-                    if (number <= 1)
-                        continue;
-
-                    bool isPrime = true;
-
-                    if (number == 2)
+                    for (int number = startNumber; number<= endNumber; number++)
                     {
-                        Console.WriteLine(number);
-                        continue;
-                    }
-
-                    if (number % 2 == 0)
-                        continue;
-
-                    int boundary = (int)Math.Sqrt(number);
-
-                    for (int i = 3; i <= boundary; i += 2)
-                    {
-                        if (number % i == 0)
+                        if(number < 2)
                         {
-                            isPrime = false;
-                            break;
+                            continue; 
+                        }
+                        if (number == 2 || number == 3)
+                        {
+                            Console.WriteLine(number);
+                            continue;
+                        }
+                        if (number % 2 == 0)
+                        {
+                            continue; 
+                        }
+                        if(number % 3 == 0)
+                        {
+                            continue;
+                        }
+                        bool isPrime = true;
+                        int limit = (int)Math.Sqrt(number);
+                        for (int i = 5; i <= limit; i += 2)
+                        {
+                            if (number % i == 0 )
+                            {
+                                isPrime = false;
+                                break;
+                            }
+                        }
+
+                        if (isPrime)
+                        {
+                            Console.WriteLine(number);
+                        }
+                        {
+                            
                         }
                     }
-
-                    if (isPrime)
-                        Console.WriteLine(number);
+                }
+                else
+                {
+                    Console.WriteLine("The starting number must be less than the ending number.");
                 }
             }
             else
             {
-                               Console.WriteLine("Invalid input. Please enter valid integers.");
+                Console.WriteLine("Invalid input. Please enter valid integers.");
             }
-        */
+
 
             #endregion
 
@@ -238,7 +253,7 @@ namespace Session_4_C
             #region question11
             //Write a program that prints an identity matrix using for loop, in other words takes a value n
             //from the user and shows the identity table of size n * n.
-
+            /*
             Console.WriteLine("please enter the number");
             bool isValidInput = int.TryParse(Console.ReadLine(), out int n);
             if (isValidInput && n > 0)
@@ -263,6 +278,7 @@ namespace Session_4_C
             {
                 Console.WriteLine("Invalid input. Please enter a valid positive integer.");
             }
+            */
             #endregion
         }
     }
