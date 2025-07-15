@@ -185,6 +185,7 @@ namespace Session_4_C
 
             #region question9
             // Write a program in C# Sharp to convert a decimal number into binary without using an array.
+            /*
             Console.Write("Enter a decimal number: ");
             int num = int.Parse(Console.ReadLine());
             string binary = "";
@@ -196,8 +197,42 @@ namespace Session_4_C
             }
 
             Console.WriteLine("Binary: " + binary);
+            */
             #endregion
 
+            #region question10
+            //Create a program that asks the user to input three points (x1, y1), (x2, y2), and (x3, y3),
+            //and determines whether these points lie on a single straight line.
+            Console.WriteLine("please enter x1");
+            bool isValidInputX1 = double.TryParse(Console.ReadLine(), out double x1);
+            Console.WriteLine("please enter y1");
+            bool isValidInputY1 = double.TryParse(Console.ReadLine(), out double y1);
+            Console.WriteLine("please enter x2");
+            bool isValidInputX2 = double.TryParse(Console.ReadLine(), out double x2);
+            Console.WriteLine("please enter y2");
+            bool isValidInputY2 = double.TryParse(Console.ReadLine(), out double y2);
+            Console.WriteLine("please enter x3");
+            bool isValidInputX3 = double.TryParse(Console.ReadLine(), out double x3);
+            Console.WriteLine("please enter y3");
+            bool isValidInputY3 = double.TryParse(Console.ReadLine(), out double y3);
+            if(isValidInputX1 && isValidInputY1 && isValidInputX2 && isValidInputY2 && isValidInputX3 && isValidInputY3)
+            {
+
+                if ((y2 - y1) * (x3 - x2) == (y3 - y2) * (x2 - x1))
+                {
+                    Console.WriteLine("Points are on a straight line.");
+                }
+                else
+                {
+                    Console.WriteLine("Points are NOT on a straight line.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Invalid input. Please enter valid numbers.");
+            }
+
+            #endregion
         }
     }
 }
